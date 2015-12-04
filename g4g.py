@@ -40,6 +40,7 @@ def save_articles_as_html_and_pdf():
                     '<html><head>'
                     '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'
                     '<link rel="stylesheet" href="style.min.css" type="text/css" media="all" />'
+                    '<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>'
                     '</head><body>'
                     )
     allArticles += '<h1 style="text-align:center;font-size:40px">' + categoryUrl.title() + ' Archive</h1><hr>'
@@ -74,13 +75,15 @@ def scrape_category(categoryUrl):
     # Traverse each link to find article and save it.
     for link in links:
         try:
-            if(i % 11 == 0):
-                sleep(5) # Sleep for 5 seconds after getting every 10th link
+            if(i % 10 == 0):
+                sleep(5) # Sleep for 5 seconds before scraping every 10th link
             print("Scraping link no: " + str(i) + " Link: " + link )
             i = i + 1
             link_soup = BeautifulSoup(requests.get(link).text)
             # Remove the space occupied by Google Ads (Drop script & ins node)
             [script.extract() for script in link_soup(["script", "ins"])]
+            for code_tag in link_soup.find_all('pre'):
+                code_tag['class'] = code_tag.get('class', []) + ['prettyprint']
             article = link_soup.find('article')
             # Now add this article to list of all articles
             articles.append(article.encode('UTF-8'))
