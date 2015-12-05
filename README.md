@@ -1,6 +1,16 @@
 # GeeksForGeeksScrapper
 Scrapes [GeeksForGeeks](http://www.geeksforgeeks.org) and creates html & PDF for chosen category along with syntax highlighting for the code.
 
+## Screenshots
+
+Example of articles of C category as html:
+
+![alt tag](https://github.com/CuriousLearner/GeeksForGeeksScrapper/blob/master/screenshots/G4G_C_html.png)
+
+Example of articles of C category as pdf:
+
+![alt tag](https://github.com/CuriousLearner/GeeksForGeeksScrapper/blob/master/screenshots/G4G_C_pdf.png)
+
 ## Installation
 To use the scrapper, install the following:
 
