@@ -40,3 +40,5 @@ Choose the category you want to scrape from the menu and wait for the magic to h
 
 You can find the output as `G4G_<category_name>.html` and `G4G_<category_name>.pdf` in the same directory.
 
+### Disclaimer: This is strictly for educational purpose only. Author will not be liable for anything, what so ever; you do with this script.
+
