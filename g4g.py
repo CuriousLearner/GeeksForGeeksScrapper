@@ -11,7 +11,7 @@ BASE_URL = 'http://www.geeksforgeeks.org/'
 articles = []
 
 choice_to_category = {1: 'c', 2: 'c-plus-plus', 3: 'java',
-                      4: 'fundamental-of-algorithms',
+                      4: 'fundamentals-of-algorithms',
                       5: 'data-structures'}
 
 def display_menu():
