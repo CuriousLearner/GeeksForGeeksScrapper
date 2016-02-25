@@ -14,6 +14,7 @@ choice_to_category = {1: 'c', 2: 'c-plus-plus', 3: 'java',
                       4: 'fundamentals-of-algorithms',
                       5: 'data-structures'}
 
+
 def display_menu():
     print("Choose category to scrape: ")
     print("1. C Language")
@@ -56,7 +57,7 @@ def save_articles_as_html_and_pdf():
     print("Generating PDF " + pdf_file_name)
     html_to_pdf_command = 'wkhtmltopdf ' + html_file_name + ' ' + pdf_file_name
     system(html_to_pdf_command)
-    
+
 
 def scrape_category(categoryUrl):
     try:
@@ -76,8 +77,9 @@ def scrape_category(categoryUrl):
     for link in links:
         try:
             if(i % 10 == 0):
-                sleep(5) # Sleep for 5 seconds before scraping every 10th link
-            print("Scraping link no: " + str(i) + " Link: " + link )
+                sleep(5)  # Sleep for 5 seconds before scraping every 10th link
+            link = link.strip()
+            print("Scraping link no: " + str(i) + " Link: " + link)
             i = i + 1
             link_soup = BeautifulSoup(requests.get(link).text)
             # Remove the space occupied by Google Ads (Drop script & ins node)
