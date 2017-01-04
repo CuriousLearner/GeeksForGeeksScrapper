@@ -32,6 +32,10 @@ or via package manager as:
 
 `$ sudo apt-get install python-bs4`
 
+or for Python dependencies, you can just install via `requirements.txt` inside the virtual environment.
+
+`$ pip install -r requirements.txt`
+
 ## Run the G4G_Scrapper
 
 $ python g4g.py
