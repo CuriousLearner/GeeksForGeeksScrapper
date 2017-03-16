@@ -10,9 +10,9 @@ from requests.exceptions import ConnectionError
 BASE_URL = 'http://www.geeksforgeeks.org/'
 articles = []
 
-choice_to_category = {1: 'c', 2: 'c-plus-plus', 3: 'java',
-                      4: 'fundamentals-of-algorithms',
-                      5: 'data-structures'}
+choice_to_category = {1: 'c', 2: 'c-plus-plus', 3: 'java', 4: 'python',
+                      5: 'fundamentals-of-algorithms',
+                      6: 'data-structures'}
 
 
 def display_menu():
@@ -20,8 +20,9 @@ def display_menu():
     print("1. C Language")
     print("2. C++ Language")
     print("3. Java")
-    print("4. Algorithms")
-    print("5. Data Structures")
+    print("4. Python")
+    print("5. Algorithms")
+    print("6. Data Structures")
 
 
 def get_category_choice():
