@@ -1,0 +1,9 @@
+Code Contributors
+=================
+
+ - Sanyam Khurana (gh: CuriousLearner / @ErSanyamKhurana)*
+ - Vishal Rohra (gh: VishalRohra)
+ - Neel Paratkar (gh: nsparatkar)
+ - Sahil Ramola (gh: RamolaWeb)
+
+* Possesses commit rights
